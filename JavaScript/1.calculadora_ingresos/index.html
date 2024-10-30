@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Calculadora de ingresos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            place-content: center;
+            height: 100vh;
+        }
+
+        label {
+            margin: 10px 0px;
+        }
+
+        button {
+            margin-top: 15px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Calculadora de ingresos</h1>
+    <label for="ingreso">Ingreso total:</label>
+    <input type="number" name="ingreso" id="ingreso" />
+
+    <label for="deducciones">Deducciones:</label>
+    <input type="number" name="deducciones" id="deduccion" />
+
+    <button>Calcular ingreso neto</button>
+
+    <p id="resultado"></p>
+    
+    <script
+      src="script.js"
+    ></script>
+  </body>
+</html>
