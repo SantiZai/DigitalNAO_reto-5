@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número en Palabras</title>
+</head>
+<body>
+    <h1>Convertidor de Números a Palabras</h1>
+    <form method="POST">
+        <label for="number">Ingrese un número:</label>
+        <input type="text" id="number" name="number" required>
+        <button type="submit">Convertir</button>
+    </form>
+    {% if result %}
+        <p><strong>Resultado:</strong> {{ result }}</p>
+    {% elif error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
+

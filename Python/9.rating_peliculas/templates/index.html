@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Películas</title>
+</head>
+<body>
+    <h1>Aplicación de Ratings de Películas</h1>
+    <form method="POST">
+        <label for="movie_title">Título de la película:</label>
+        <input type="text" id="movie_title" name="movie_title" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% elif movie_info %}
+        <h2>{{ movie_info.title }} ({{ movie_info.year }})</h2>
+        <p><strong>Calificación IMDb:</strong> {{ movie_info.rating }}</p>
+        <p><strong>Género:</strong> {{ movie_info.genre }}</p>
+        <p><strong>Sinopsis:</strong> {{ movie_info.plot }}</p>
+        {% if movie_info.poster != "N/A" %}
+            <img src="{{ movie_info.poster }}" alt="Poster de {{ movie_info.title }}" style="width:200px;">
+        {% endif %}
+    {% endif %}
+</body>
+</html>
+

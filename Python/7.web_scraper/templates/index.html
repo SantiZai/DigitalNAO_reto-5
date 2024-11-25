@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper</title>
+</head>
+<body>
+    <h1>Web Scraper</h1>
+    <form method="POST">
+        <label for="url">Ingrese la URL:</label>
+        <input type="url" id="url" name="url" required>
+        <button type="submit">Scrapear</button>
+    </form>
+    {% if titles %}
+        <h2>Títulos extraídos:</h2>
+        <ul>
+            {% for title in titles %}
+                <li>{{ title }}</li>
+            {% endfor %}
+        </ul>
+    {% elif error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
+

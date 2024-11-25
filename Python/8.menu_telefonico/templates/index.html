@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Telefónico (USSD)</title>
+</head>
+<body>
+    <h1>Simulación de Menú Telefónico (USSD)</h1>
+    {% if message %}
+        <p><strong>{{ message }}</strong></p>
+    {% else %}
+        <p>Seleccione una opción:</p>
+        <ul>
+            {% for key, value in menu.items() %}
+                <li>{{ key }}. {{ value.text }}</li>
+            {% endfor %}
+        </ul>
+        <form method="POST">
+            <input type="text" name="option" placeholder="Ingrese la opción" required>
+            <button type="submit">Enviar</button>
+        </form>
+    {% endif %}
+</body>
+</html>
+
