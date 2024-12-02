@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Paint App</title>
+    <link
+      rel="stylesheet"
+      href="/static/styles.css"
+    />
+  </head>
+  <body>
+    <h1>Pinta con tu cursor</h1>
+    <div id="controls">
+      <label for="colorPicker">Color:</label>
+      <input
+        type="color"
+        id="colorPicker"
+        value="#000000"
+      />
+
+      <label for="brushSize">Brush Size:</label>
+      <input
+        type="range"
+        id="brushSize"
+        min="1"
+        max="20"
+        value="5"
+      />
+      <span id="brushSizeValue">5</span>
+
+      <button id="clearCanvas">Clear Canvas</button>
+
+      <label for="drawingName">Drawing Name:</label>
+      <input
+        type="text"
+        id="drawingName"
+        placeholder="Enter name"
+      />
+
+      <button id="saveDrawing">Save Drawing</button>
+      <button id="loadDrawing">Load Drawing</button>
+    </div>
+    <canvas id="paintCanvas"></canvas>
+    <script src="/static/scripts.js"></script>
+  </body>
+</html>

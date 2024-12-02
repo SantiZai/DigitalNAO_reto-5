@@ -1,0 +1,23 @@
+#controls {
+  margin-bottom: 10px;
+}
+
+#controls label,
+#controls input,
+#controls button {
+  margin: 5px;
+  font-size: 16px;
+}
+
+#controls button {
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#controls button:hover {
+  background-color: darkred;
+}
